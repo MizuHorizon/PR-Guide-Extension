@@ -3,13 +3,13 @@
     "version": "0.1.0",
     "description": "Check if you are inside a GitHub pull request",
     "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://*.github.com/*"],
+    "host_permissions": ["https://github.com/*"],
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
       {
-        "matches": ["https://*.github.com/*"],
+        "matches": ["https://github.com/*pull/*/files/*"],
         "js": ["contentScript.js"]
       }
     ],
@@ -21,7 +21,7 @@
           "assets/delete.png",
           "assets/save.png"
         ],
-        "matches": ["https://*.github.com/*"]
+        "matches": ["https://github.com/*pull/*/files/*"]
       }
     ],
     "action": {
