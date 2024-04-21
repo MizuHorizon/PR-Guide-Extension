@@ -15,15 +15,18 @@
     ],
     "web_accessible_resources": [
       {
-        "resources": [
-          "assets/bookmark.png",
-          "assets/play.png",
-          "assets/delete.png",
-          "assets/save.png"
-        ],
-        "matches": ["https://github.com/*pull/*/files/*"]
+          "resources": [
+              "assets/bookmark.png",
+              "assets/play.png",
+              "assets/delete.png",
+              "assets/ext-icon.png",
+              "assets/save.png"
+          ],
+          "matches": [
+            "https://github.com/*"
+          ]
       }
-    ],
+  ],
     "action": {
       "default_icon": {
         "16": "assets/ext-icon.png",
