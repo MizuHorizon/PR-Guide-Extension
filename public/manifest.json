@@ -1,0 +1,25 @@
+{
+  "manifest_version":3,
+  "version": "0.1.0",
+  "name":"PR Guide",
+  "description": "Check if you are inside a GitHub pull request",
+  "permissions": ["storage", "tabs","activeTab","scripting"],
+  "host_permissions": ["https://github.com/*"],
+ "action": {
+  "default_popup":"index.html"
+ },
+ "icons":{
+  "16":"Appicon.png",
+  "24":"Appicon.png",
+  "32":"Appicon.png"
+ },
+ "background": {
+  "service_worker": "background.js"
+},
+"content_scripts": [
+  {
+    "matches": ["https://github.com/*"],
+    "js": ["contentScript.js"]
+  }
+]
+}
