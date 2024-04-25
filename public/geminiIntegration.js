@@ -1,5 +1,4 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const genAI = new GoogleGenerativeAI("AIzaSyDWmrCm60PDg_-0pZYYVgRPU6tisvVwy_A");
 
 async function getData() {
   const result = await chrome.storage.local.get("MainCode");
@@ -13,7 +12,9 @@ async function getData() {
 }
 
 
-export async function run() {
+export async function run(ApiKey) {
+  const genAI = new GoogleGenerativeAI(`${ApiKey}`);
+  console.log(genAI)
   const data = await getData()
   console.log(data)
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });

@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+.inputs {
+  background-color:#888;
+  padding: 16px;
+  border-radius: 8px;
+  color:white;
+}
+.input {
+  padding: 16px;
+  border-radius: 8px;
+}
