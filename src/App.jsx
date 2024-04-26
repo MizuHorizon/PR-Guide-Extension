@@ -1,4 +1,4 @@
-import reactLogo from "./assets/react.svg";
+import Logo from "./assets/illustrationPR.svg";
 import "./App.css";
 import { run } from "../public/geminiIntegration";
 import { useState } from "react";
@@ -16,14 +16,12 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://react.dev/" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          <img src={Logo} className="logo react" alt="React logo" />
       </div>
-      <h1>Your PR Guide</h1>
+      <h1>Merge Master</h1>
       <div className="input">
         <input
-          type="text"
+          type="password"
           placeholder={ApiKey}
           onChange={handleChange}
           className="inputs"

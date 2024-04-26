@@ -23,19 +23,20 @@ export async function run(ApiKey) {
   const result = await model.generateContent(prompt);
   const response = await result.response;
   const text = response.text();
-  console.log
   const win = window.open("", "_blank");
-   if (typeof text === "string") {
-     win.document.write(text);
-   } else {
-     try {
-     // If not a string, try converting to JSON (assuming it's an object)
-       const jsonResponse = JSON.stringify(text);
-       win.document.write(jsonResponse);
-     } catch (error) {
-       // Handle potential errors during JSON conversion
-       console.error("Error converting response to JSON:", error);
-       win.document.write("An error occurred while processing the response.");
-     }
-   }
+  if (typeof text === "string") {
+    const textWithLineBreaks = text.replace(/(\r\n|\n|\r)/g, "<br>");
+    win.document.write(textWithLineBreaks);
+  } else {
+    try {
+      // If not a string, try converting to JSON (assuming it's an object)
+      const jsonResponse = JSON.stringify(text);
+      const WithLineBreaks = jsonResponse.replace(/(\r\n|\n|\r)/g, "<br>");
+      win.document.write(WithLineBreaks);
+    } catch (error) {
+      // Handle potential errors during JSON conversion
+      console.error("Error converting response to JSON:", error);
+      win.document.write("An error occurred while processing the response.");
+    }
+  }
 }
