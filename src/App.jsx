@@ -4,12 +4,12 @@ import { run } from "../public/geminiIntegration";
 import { useState } from "react";
 
 function App() {
-  const [ApiKey, setApiKey] = useState("");
+  const [ApiKey, setApiKey] = useState("Enter your API_KEY"); // State to store response
+  
   const handleClick = async () => {
-    const yourResponse = await run(ApiKey);
-    console.log("code in response ", yourResponse);
-    return yourResponse;
+    const response = await run(ApiKey);
   };
+  
   const handleChange = (e) => {
     setApiKey(e.target.value);
   };

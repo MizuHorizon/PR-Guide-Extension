@@ -23,4 +23,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   } else {
     console.warn("No code found using either selector.");
   }
+
 });
