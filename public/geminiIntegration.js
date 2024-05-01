@@ -39,4 +39,6 @@ export async function run(ApiKey) {
       win.document.write("An error occurred while processing the response.");
     }
   }
+  console.log("above return",text)
+  return text
 }

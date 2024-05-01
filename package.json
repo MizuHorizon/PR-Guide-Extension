@@ -12,8 +12,10 @@
   "dependencies": {
     "@google/generative-ai": "^0.8.0",
     "cheerio": "^1.0.0-rc.12",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
