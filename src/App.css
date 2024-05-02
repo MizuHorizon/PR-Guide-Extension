@@ -36,10 +36,6 @@
 .card {
   padding: 2em;
 }
-.MainBody {
-  flex-direction: column;
-  align-items: center;
-}
 
 .read-the-docs {
   color: #888;

@@ -14,7 +14,10 @@ function App() {
     } else {
       setLoading(true);
       const response = await run(ApiKey);
-      if (response) {
+      if (response === null) {
+        alert(
+          "you are not on files changed section of the pull request. Go to the files changed section to use this extension"
+        );
         setLoading(false);
       }
     }
