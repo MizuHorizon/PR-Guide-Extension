@@ -13,3 +13,5 @@ How to Install and use Merge Master extension
 - click on "Get PR Guide" button
 - wait for few seconds
 - and there you go!! 
+![image](https://github.com/MizuHorizon/PR-Guide-Extension/assets/116601734/1a86f09a-554b-4df5-97f2-6c963325842e)
+![image](https://github.com/MizuHorizon/PR-Guide-Extension/assets/116601734/a16fcb5c-0c01-4bf9-9ecc-7164d3e7f4f1)
